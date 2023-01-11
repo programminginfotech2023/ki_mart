@@ -310,6 +310,59 @@ button {
   background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
 } */
 
+/* -----contact------ */
+/* info */
+.infoBox div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.infoBox div span {
+  min-width: 40px;
+  height: 40px;
+  color: #fff;
+  background: #18b7ff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.infoBox div p{
+  color: #ffffff;
+}
+
+.infoBox div a{
+  color: #fff;
+  font-size: 1.1em;
+}
+
+.sci{
+  margin-top: 40px;
+  display: flex;
+}
+.sci li{
+  margin-right: 15px;
+}
+
+.sci li a{
+  color: #fff;
+  font-size: 2em;
+  color: #ccc;
+}
+
+.sci li a:hover{
+  color: #fff !important;
+}
+
+
+
+/* form  */
+
 #contact .container {
   position: relative;
   width: 100%;
