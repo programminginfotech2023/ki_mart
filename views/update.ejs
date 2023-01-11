@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Data</title>
+</head>
+<body>
+    
+     <!--  Start -->
+     <section class="" style="background: #000; padding: 150px;">
+        <div class="container">
+            <form class="email-form mt-4" method="post" action="/admindata">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="col-md-6 form-group mt-3 mt-md-0">
+                        <input type="email" name="Email" class="form-control" id="email"
+                            placeholder="Your Email">
+                    </div>
+                </div>
+                <div class="form-group mt-3">
+                    <input type="no" name="txtPhone" class="form-control" id="phone"
+                        placeholder="Enter Your Mobile No">
+                </div>
+                <div class="form-group mt-3">
+                    <textarea class="form-control" name="txtMessage" id="message" rows="5"
+                        placeholder="Message"></textarea>
+                </div>
+                <div class="text-center mt-3">
+                    <button type="submit" name="submit" value="submit">Send
+                        Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!--  End -->
+
+</body>
+</html>
