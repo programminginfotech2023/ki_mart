@@ -599,3 +599,104 @@ button {
   font: 600;
   font-size: 18px;
 } */
+
+
+/* ================== */
+.module {
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.module__shape {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.module__shape:hover {
+  transform: translateY(-5px);
+  transition: transform 0.5s;
+}
+.module__shape:hover + .module__content {
+  transform: translateY(-7px);
+  transition: transform 0.2s;
+}
+.module__shape:hover > div {
+  cursor: pointer;
+  background-color: #b6deb8;
+}
+.module__shape:hover > .module__shape-shadow-1 {
+  box-shadow: 0px 8px 8px 0px #b3dcfa;
+}
+.module__shape:hover > .module__shape-shadow-2 {
+  box-shadow: 0px -8px 8px 0px #b3dcfa;
+}
+.module__shape:hover > .module__shape-shadow-3 {
+  box-shadow: 0px 8px 8px 0px #b3dcfa;
+}
+.module__shape-shadow-1 {
+  position: absolute;
+  width: 12.5rem;
+  height: 30rem;
+  border-radius: 4px;
+  transform: rotate(-45deg);
+  box-shadow: 0px 8px 8px 0px #cbe7fb;
+}
+.module__shape-shadow-2 {
+  position: absolute;
+  width: 12.5rem;
+  height: 30rem;
+  border-radius: 4px;
+  transform: rotate(90deg);
+  box-shadow: 0px -8px 8px 0px #cbe7fb;
+}
+.module__shape-shadow-3 {
+  position: absolute;
+  width: 12.5rem;
+  height: 30rem;
+  border-radius: 4px;
+  box-shadow: 0px 8px 8px 0px #cbe7fb;
+}
+.module__shape-rec1 {
+  transform: rotate(45deg);
+  position: absolute;
+  width: 12.5rem;
+  height: 30rem;
+  border-radius: 4px;
+  border-top: 1px solid #a5d6a7;
+  border-bottom: 1px solid #a5d6a7;
+  background-color: #c8e6c9;
+}
+.module__shape-rec2 {
+  transform: rotate(-45deg);
+  position: absolute;
+  width: 12.5rem;
+  height: 30rem;
+  border-radius: 4px;
+  border-top: 1px solid #a5d6a7;
+  border-bottom: 1px solid #a5d6a7;
+  background-color: #c8e6c9;
+}
+.module__shape-rec3 {
+  position: absolute;
+  width: 12.5rem;
+  height: 30rem;
+  border-radius: 4px;
+  border-top: 1px solid #a5d6a7;
+  border-bottom: 1px solid #a5d6a7;
+  background-color: #c8e6c9;
+}
+.module__shape-rec4 {
+  transform: rotate(90deg);
+  position: absolute;
+  width: 12.5rem;
+  height: 30rem;
+  border-radius: 4px;
+  border-top: 1px solid #a5d6a7;
+  border-bottom: 1px solid #a5d6a7;
+  background-color: #c8e6c9;
+}
