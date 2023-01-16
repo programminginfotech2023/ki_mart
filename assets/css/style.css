@@ -9,10 +9,10 @@
 }
 
 body {
-  background-color: #00DBDE;
+  /* background-color: #00DBDE;  */
   background-image: linear-gradient(250deg, #00DBDE 0%, #FC00FF 100%);
   background-size: 400% 400%;
-  animation: mymove 5s infinite;
+  /* animation: mymove 5s infinite; */
 }
 
 @keyframes mymove {
@@ -32,8 +32,8 @@ body {
 ul,
 li {
   list-style: none;
-  margin: 0;1 
-  padding: 0;
+  margin: 0;
+  1 padding: 0;
 }
 
 
@@ -642,3 +642,25 @@ button {
 }
 
 /*  Loader End */
+
+.box {
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(180deg, rgba(255, 8, 8, 0.225) 9.51%, rgba(0, 255, 255, 0.26) 109.51%);
+  box-shadow: 10px 7px 25px rgba(0, 0, 0, 0.25), inset 6px 4px 19px rgba(0, 0, 0, 0.25);
+  /* transform: rotate(-179.92deg); */
+  border-top: 10x solid #000;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
+
+.box div box-icon{
+  width: 100px !important ;
+}
+
+.long_box {
+  width: 850px;
+  height: 350px;
+  background: linear-gradient(180deg, rgba(0, 224, 255, 0.1) 0%, rgba(255, 0, 0, 0.035) 100%);
+  box-shadow: 5px 6px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 70px;
+}
