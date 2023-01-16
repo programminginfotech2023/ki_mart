@@ -17,14 +17,16 @@ body {
 
 @keyframes mymove {
   0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 ul,
@@ -46,7 +48,7 @@ a:hover {
 }
 
 section {
-  height: 100vh;
+  padding: 100px 0;
 }
 
 h1,
@@ -603,3 +605,36 @@ button {
 
 /* ================== */
 
+/* Loader Start */
+.spinner {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  border: 5.8px solid #0000;
+  border-radius: 50%;
+  border-right-color: rgba(255, 0, 0, 0.74);
+  animation: spinner-a4dj62 1.4s infinite linear;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2.9px;
+  border: inherit;
+  border-radius: 50%;
+  animation: spinner-a4dj62 2.8s infinite;
+}
+
+.spinner::after {
+  margin: 11.6px;
+  animation-duration: 4.199999999999999s;
+}
+
+@keyframes spinner-a4dj62 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+/*  Loader End */
