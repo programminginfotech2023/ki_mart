@@ -9,9 +9,12 @@
 }
 
 body {
-  /* background-color: #00DBDE;  */
-  /* background-image: linear-gradient(250deg, #00DBDE 0%, #FC00FF 100%); */
-  /* background-size: 400% 400%; */
+  /* background-color: #00DBDE;
+  background-image: linear-gradient(250deg, #00DBDE 0%, #FC00FF 100%);
+  background-size: 400% 400%; */
+  background: rgb(238, 174, 202);
+  background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1));
+  background-repeat: repeat;
   /* animation: mymove 5s infinite; */
 }
 
@@ -33,7 +36,7 @@ ul,
 li {
   list-style: none;
   margin: 0;
-  1 padding: 0;
+  padding: 0;
 }
 
 
@@ -779,5 +782,4 @@ button {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000;
-}
 }
