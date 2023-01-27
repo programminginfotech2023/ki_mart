@@ -16,4 +16,3 @@ db.once('open', function(err){
 })
 
 module.exports = db;
-
