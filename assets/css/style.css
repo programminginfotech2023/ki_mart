@@ -42,7 +42,7 @@ section {
 
 /* ================== Glass Effect Start ================== */
 
-#footer .container,
+/* #footer .container,
 #contact .container {
   position: relative;
   padding: 20px;
@@ -53,7 +53,6 @@ section {
   border-radius: 10px;
   overflow: hidden;
   backdrop-filter: blur(25px);
-  
 }
 
 #contact .container::before {
@@ -66,7 +65,7 @@ section {
   background: rgba(255, 255, 255, 0.1);
   pointer-events: none;
   transform: skewX(-15deg);
-}
+} */
 
 /* ======================================================== */
 
@@ -357,84 +356,37 @@ section {
 }
 
 @media (max-width: 767px) {
-.imgBx{
-  order : 1;
-}
+  .imgBx {
+    order: 1;
+  }
 
   .banner_container {
     padding: 0;
-}
-.content{
-  padding-left: 40px;
-}
+  }
+  .content {
+    padding-left: 40px;
+  }
 }
 
 /* ======================================================== */
 
-/* ================== Header Start ================== */
+/* ================== About Start ================== */
 
 button {
   background-color: #00dbde;
   background-image: linear-gradient(200deg, #00dbde 0%, #fc00ff 100%);
 }
 
-/* 
+/* ======================================================== */
 
-.about,.services {
-  background-color: #00DBDE;
-  background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
-}
+/* ================== Why Cousie Us Start ================== */
 
-.why_we,.loan {
-  background-color: #8BC6EC;
-  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-} */
 
-/* ----------------------- Why Cousie Us ---------------- */
 
-.box {
-  width: 350px;
-  height: 350px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 8, 8, 0.225) 9.51%,
-    rgba(0, 255, 255, 0.26) 109.51%
-  );
-  box-shadow: 10px 7px 25px rgba(0, 0, 0, 0.25),
-    inset 6px 4px 19px rgba(0, 0, 0, 0.25);
-  /* transform: rotate(-179.92deg); */
-  border-top: 10x solid #000;
-  clip-path: polygon(
-    30% 0%,
-    70% 0%,
-    100% 30%,
-    100% 70%,
-    70% 100%,
-    30% 100%,
-    0% 70%,
-    0% 30%
-  );
-}
+/* ======================================================== */
 
-.box .text-center i {
-  font-size: 8rem;
-}
+/* ==================Contact Start ================== */
 
-.box .text-center p {
-  font-size: 3rem;
-}
-
-.long_box {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 224, 255, 0.1) 0%,
-    rgba(255, 0, 0, 0.035) 100%
-  );
-  box-shadow: 5px 6px 25px rgba(0, 0, 0, 0.25);
-  border-radius: 70px;
-}
-
-/* --------------- contact ---------------- */
 /* info */
 .infoBox div {
   display: flex;
@@ -572,57 +524,9 @@ button {
   height: 100%;
 }
 
-/* .abc {
-  border: none;
-  padding: 18px 40px;
-  cursor: pointer;
-  outline: none;
-  background: #fff;
-  color: #000;
-  font: 600;
-  font-size: 18px;
-} */
+/* ======================================================== */
 
-/* ================== */
-/* Footer Start */
-
-/* ================== */
-
-/* Loader Start */
-.spinner {
-  width: 72px;
-  height: 72px;
-  display: grid;
-  border: 5.8px solid #0000;
-  border-radius: 50%;
-  border-right-color: rgba(255, 0, 0, 0.74);
-  animation: spinner-a4dj62 1.4s infinite linear;
-}
-
-.spinner::before,
-.spinner::after {
-  content: "";
-  grid-area: 1/1;
-  margin: 2.9px;
-  border: inherit;
-  border-radius: 50%;
-  animation: spinner-a4dj62 2.8s infinite;
-}
-
-.spinner::after {
-  margin: 11.6px;
-  animation-duration: 4.199999999999999s;
-}
-
-@keyframes spinner-a4dj62 {
-  100% {
-    transform: rotate(1turn);
-  }
-}
-
-/*  Loader End */
-
-/* ------- Footer Start ---------------- */
+/* ================== Footer Start ================== */
 
 .footer-cta {
   border-bottom: 1px solid #373636;
@@ -805,30 +709,3 @@ button {
   font-size: 14px;
   color: #ffffff;
 }
-
-/* Footer end  */
-
-/* Extra */
-
-/* Track */
-::-webkit-scrollbar {
-  width: 20px;
-}
-
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey;
-  border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: red;
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #b30000;
-}
-
-/*  */
