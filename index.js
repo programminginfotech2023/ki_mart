@@ -9,6 +9,7 @@ const app = express();
 const path = require('path');
 
 const db = require('./config/mongoose');
+const Client = require('./models/client');
 
 const Student = require('./models/client');
 
@@ -20,22 +21,16 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname, 'assets')));
 
-app.get('/', function(req,res){
-    return res.render('index',{
-        'title' : "Ki-Mart"
-    });
-});
 
 app.get('/', function (req, res) {
     // return res.end("hi");
-    Student.find({}, function (err, record) {
+    Client.find({}, function (err, record) {
         if (err) {
             console.log("record not fetch from mongodb");
             return false;
         }
-        return res.render('home', {
-            "studentDetail": record,
-            "title": "home page"
+        return res.render('', {
+            "title": "Ki page"
         })
     })
 })
@@ -94,7 +89,7 @@ app.post('/cilentdata', function (req, res) {
     // var agedata = req.body.age;
     // var namedata = req.body.name;
 
-    student.create(req.body, function (err, data) {
+    Client.create(req.body, function (err, data) {
         if (err) {
             console.log("record not inserted");
             return false;
@@ -102,9 +97,7 @@ app.post('/cilentdata', function (req, res) {
         console.log(data);
         return res.redirect('/');
     })
-})
-
-
+});
 
 app.listen(port, function (err) {
     if (err) {

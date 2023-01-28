@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb://127.0.0.1/express");
+mongoose.connect("mongodb://127.0.0.1/kimart");
 
 const db = mongoose.connection;
 
