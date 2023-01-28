@@ -10,7 +10,7 @@ const path = require('path');
 
 const db = require('./config/mongoose');
 
-const Student = require('./models/student');
+const Student = require('./models/client');
 
 app.use(urlencoded());
 
@@ -39,21 +39,6 @@ app.get('/', function (req, res) {
         })
     })
 })
-
-app.get('/data', function (req, res) {
-    // return res.end("hi");
-    Student.find({}, function (err, record) {
-        if (err) {
-            console.log("record not fetch from mongodb");
-            return false;
-        }
-        return res.render('data', {
-            "studentDetail": record,
-            "title": "data page"
-        })
-    })
-})
-
 
 // Delate Data By From
 
@@ -104,11 +89,12 @@ app.post('/editAdminData', function (req, res) {
 
 // Admin Data By Form
 
-app.post('/admindata', function (req, res) {
+// Add Data From sign From
+app.post('/cilentdata', function (req, res) {
     // var agedata = req.body.age;
     // var namedata = req.body.name;
 
-    Student.create(req.body, function (err, data) {
+    student.create(req.body, function (err, data) {
         if (err) {
             console.log("record not inserted");
             return false;
@@ -116,8 +102,8 @@ app.post('/admindata', function (req, res) {
         console.log(data);
         return res.redirect('/');
     })
+})
 
-});
 
 
 app.listen(port, function (err) {

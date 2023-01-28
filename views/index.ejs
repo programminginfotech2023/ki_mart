@@ -64,7 +64,7 @@
 
     <!-- Banner Start -->
 
-    <section class="banner d-flex align-items-center justify-content-center" id="home">
+    <!-- <section class="banner d-flex align-items-center justify-content-center" id="home">
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-6 col-12">
@@ -82,6 +82,24 @@
             <div>
               <img src="/img/banner.png" class="img-fluid" alt="" />
             </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section>
+      <div class="container">
+        <div class="banner_container row">
+          <div class="content">
+            <h1>Per Month 10000+ Income With Ki Mart </h1>
+            <p>
+              requirements of ship owners, ship managers and endeavors to be a
+              strategic partner amongst
+            </p>
+            <a href="#">Read More</a>
+          </div>
+          <div class="imgBx">
+            <img src="/img/banner.png" alt="">
           </div>
         </div>
       </div>
@@ -238,53 +256,55 @@
     <section class="contact d-flex justify-content-center align-items-center w-100" id="contact">
       <div class="container">
         <h2 class="pt-5 text-center">Get In Touch</h2>
-        <div class="row100">
-          <div class="col">
-            <div class="inputBox">
-              <input type="text" name="name" required="required" />
-              <span class="text">First Name</span>
-              <div class="line"></div>
+        <form action="/cilentdata" method="post">
+          <div class="row100">
+            <div class="col">
+              <div class="inputBox">
+                <input type="text" name="name" required="required" />
+                <span class="text">First Name</span>
+                <div class="line"></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="inputBox">
+                <input type="text" name="email" required="required" />
+                <span class="text">Email</span>
+                <div class="line"></div>
+              </div>
             </div>
           </div>
-          <div class="col">
-            <div class="inputBox">
-              <input type="text" name="email" required="required" />
-              <span class="text">Email</span>
-              <div class="line"></div>
+          <div class="row100">
+            <div class="col">
+              <div class="inputBox">
+                <input type="number" name="number" required="required" />
+                <span class="text">Phone No</span>
+                <div class="line"></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="inputBox">
+                <input type="" name="city" required="required" value="Jamnager" />
+                <span class="text">Enter Your City</span>
+                <div class="line"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row100">
-          <div class="col">
-            <div class="inputBox">
-              <input type="number" name="number" required="required" />
-              <span class="text">Phone No</span>
-              <div class="line"></div>
+          <div class="row100">
+            <div class="col">
+              <div class="inputBox textarea">
+                <textarea name="msg" id="" required="required" cols="10" rows="10"></textarea>
+                <span class="text">Type Your Message Here...</span>
+                <span class="line"></span>
+              </div>
             </div>
           </div>
-          <div class="col">
-            <div class="inputBox">
-              <input type="" name="city" required="required" value="Jamnager" />
-              <span class="text">Enter Your City</span>
-              <div class="line"></div>
+          <div class="row100">
+            <div class="col">
+              <button class="button" value="submit"><span>Submit</span></button>
             </div>
           </div>
-        </div>
-        <div class="row100">
-          <div class="col">
-            <div class="inputBox textarea">
-              <textarea name="msg" id="" required="required" cols="10" rows="10"></textarea>
-              <span class="text">Type Your Message Here...</span>
-              <span class="line"></span>
-            </div>
-          </div>
-        </div>
-        <div class="row100">
-          <div class="col">
-            <button class="button" value="submit"><span>Submit</span></button>
-          </div>
-        </div>
       </div>
+      </form>
     </section>
 
     <!-- contact End -->
@@ -417,7 +437,7 @@
   <script src="/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="/vendor/boxicons/js/boxicons.js"></script>
 
-  
+
   <!-- Template Main JS File -->
   <script src="/js/index.js"></script>
 </body>
