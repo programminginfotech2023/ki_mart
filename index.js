@@ -9,9 +9,10 @@ const app = express();
 const path = require('path');
 
 const db = require('./config/mongoose');
+
 const Client = require('./models/client');
 
-const Student = require('./models/client');
+const emailsubscribe = require('./models/subscribe');
 
 app.use(urlencoded());
 
@@ -98,6 +99,22 @@ app.post('/cilentdata', function (req, res) {
         return res.redirect('/');
     })
 });
+
+// Footer FormData
+app.post('/subscribe', function (req, res) {
+    // var agedata = req.body.age;
+    // var namedata = req.body.name;
+
+    emailsubscribe.create(req.body, function (err, data) {
+        if (err) {
+            console.log("record not inserted");
+            return false;
+        }
+        console.log(data);
+        return res.redirect('/');
+    })
+});
+
 
 app.listen(port, function (err) {
     if (err) {

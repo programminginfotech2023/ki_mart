@@ -37,13 +37,14 @@
   <!-- Template Main CSS File -->
   <link href="/css/style.css" rel="stylesheet" />
 
-
   <link href="/assets/css/style.css" rel="stylesheet" />
   <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
 </head>
 
 <body>
+
+
   <header id="header" class="header-top bg-dark d-flex align-items-center justify-content-center">
     <div class="container">
       <h2 class=""><a href="/" class="text-light">Ki Mart</a></h2>
@@ -64,7 +65,7 @@
 
     <!-- ================== Banner Start ================== -->
 
-    <section class="" id="home">
+    <section id="home">
       <div class="container">
         <div class="banner_container row">
           <div class="col-lg-6 col-12 content">
@@ -73,7 +74,9 @@
               requirements of ship owners, ship managers and endeavors to be a
               strategic partner amongst
             </p>
-            <a href="#">Read More</a>
+            <div>
+              <button class="custom-btn btn">Read More</button>
+            </div>
           </div>
           <div class="imgBx col-lg-6 col-12">
             <img src="/img/banner.png" alt="">
@@ -84,12 +87,13 @@
 
     <!-- ================== Banner End ================== -->
 
-    <!-- About Start -->
+    <!-- ================== About Start ================== -->
 
     <section class="about d-flex align-items-center justify-content-center" id="about">
       <div class="container banner_container">
-        <div>
-          <h2 class="text-center pb-5">About Us</h2>
+        <div class="title align-self-center">
+          <h3 class="">About Us</h3>
+          <span>Lorem, ipsum.</span>
         </div>
         <div class="row align-items-center justify-content-center ">
           <div class="col-lg-6">
@@ -106,71 +110,22 @@
             <span>whose aim is to make every woman power of India self-reliant
             </span>
             <div class="p-lg-0 pb-3">
-              <button class="button"><span>Discover More</span></button>
+              <button class="custom-btn btn">Read More</button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About End -->
+    <!-- ================== About End ================== -->
 
     <!-- Why Choice We Start -->
-    <!-- 
-    <section class="why_we d-flex align-items-center justify-content-center">
-      <div class="container">
-        <div>
-          <span></span>
-          <h2></h2>
-        </div>
-        <div class="row pb-5 align-items-center justify-content-center">
-          <div class="col-lg-4 col-12">
-            <div class="box d-flex align-items-center justify-content-center">
-              <div class="text-center">
-                <i class='bx bx-glasses'></i>
-                <p class="m-0">Over Vision</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-8 col-12">
-            <div class="long_box"></div>
-          </div>
-        </div>
-        <div class="row pb-5 align-items-center justify-content-center">
-          <div class="col-lg-8">
-            <div class="long_box"></div>
-          </div>
-          <div class="col-lg-4 d-flex justify-content-end align-items-center">
-            <div class="box d-flex align-items-center justify-content-center">
-              <div class="text-center">
-                <i class="bi bi-graph-up"></i>
-                <p class="m-0">OUR MISSION</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row pb-5 align-items-center justify-content-center">
-          <div class="col-lg-4">
-            <div class="box d-flex align-items-center justify-content-center">
-              <div class="text-center">
-                <i class="ri-heart-add-fill"></i>
-                <p class="m-0">OUR VALUES
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-8">
-            <div class="long_box"></div>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <!-- Why Choice We End -->
 
-    <!-- contact Start -->
+    <!-- ================== contact Start ================== -->
 
-    <section class="contact vh-100" id="contact">
+    <section class="contact" id="contact">
       <div class="container banner_container">
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-6">
@@ -243,9 +198,10 @@
               </div>
             </div>
             <div class="col">
-              <div class="inputBox">
-                <input type="text" name="email" required="required" />
+              <div class="inputBox" id="valid">
+                <input type="text" name="email" required="required" id="email" onkeyup="validate()" />
                 <span class="text">Email</span>
+                <h6 id="text" class="d-block"></h6>
                 <div class="line"></div>
               </div>
             </div>
@@ -277,24 +233,19 @@
           </div>
           <div class="row100">
             <div class="col">
-              <button class="button" value="submit"><span>Submit</span></button>
+              <button class="custom-btn btn" value="submit"><span>Submit</span></button>
             </div>
           </div>
       </div>
       </form>
     </section>
 
-    <!-- contact End -->
+    <!-- ================== contact End ================== -->
 
-    <!-- Loader Start-->
-    <div class="spinner"></div>
-
-    <div id="scroll"></div>
-
-    <!-- Loader End-->
   </main>
 
-  <!--  -------------------- Footer Start -------------------------------------------  -->
+  <!--  ================== Footer Start ==================  -->
+
   <footer class="footer-section" id="footer">
     <div class="container banner_container">
       <div class="footer-cta pt-5 pb-5">
@@ -375,12 +326,13 @@
               <div class="footer-text mb-25">
                 <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
               </div>
-              <div class="subscribe-form">
-                <form action="#">
-                  <input type="text" placeholder="Email Address">
-                  <button><i class="ri-send-plane-line"></i></button>
+              <div class="subscribe-form" id="valid">
+                <form action="/subscribe" method="post">
+                  <input type="text" placeholder="Email Address" name="emailsubscribe" id="email" onkeyup="subvalidate()">
+                  <button class="m-0"><i class="ri-send-plane-line"></i></button>
                 </form>
               </div>
+              <h6 id="text" class="d-block"></h6>
             </div>
           </div>
         </div>
@@ -404,7 +356,30 @@
         </div>
       </div>
   </footer>
-  <!-- Vendor JS Files -->
+
+  <!--  ================== Footer End ==================  -->
+
+  <!-- ================== Loader Start================== -->
+
+  <!-- ================== Loader End ================== -->
+
+  <!-- ================== Scrool Start================== -->
+  <div id="preogressbar"></div>
+  <div id="scrollpath"></div>
+
+  <script>
+    var percent = document.getElementById("preogressbar")
+
+    var totalHeight = document.body.scrollHeight - window.innerHeight;
+    window.onscroll = function () {
+      var preogress = (window.pageYOffset / totalHeight) * 100;
+      preogressbar.style.height = preogress + "%";
+    }
+  </script>
+  <!-- ================== Scrool End ================== -->
+
+
+  <!-- ================== Vendor JS Files ================== -->
   <script src="/js/jquery.min.js"></script>
   <script src="/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -414,9 +389,11 @@
   <script src="/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="/vendor/boxicons/js/boxicons.js"></script>
 
-
-  <!-- Template Main JS File -->
+  <!-- ================== Template Main JS File ================== -->
   <script src="/js/index.js"></script>
+  <script src="/assets/js/index.js"></script>
+
+  
 </body>
 
 </html>

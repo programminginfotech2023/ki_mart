@@ -25,6 +25,11 @@ li {
   padding: 0;
 }
 
+p {
+  font-size: 25px;
+  font-weight: 600;
+}
+
 a {
   text-decoration: none;
 }
@@ -36,6 +41,28 @@ a:hover {
 
 section {
   padding: 100px 0;
+}
+
+/* ======================================================== */
+
+/* ================== Glass Effect Start ================== */
+
+.title {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.title h3 {
+  font-size: 35px;
+  font-weight: 700;
+  font-style: oblique;
+  color: #18b7ff;
+}
+
+.title h3 {
+  font-size: 35px;
+  font-weight: 700;
+  font-style: oblique;
 }
 
 /* ======================================================== */
@@ -67,50 +94,112 @@ section {
   transform: skewX(-15deg);
 } */
 
+.banner_container {
+  /* min-height: 100vh; */
+  background: rgba(255, 255, 255, 0.5);
+  background: transparent;
+  /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05); */
+  box-shadow: -7px -7px 20px 0px rgba(51, 50, 50, 0.08),
+    -4px -4px 5px 0px rgba(80, 78, 78, 0.08),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.08), 4px 4px 5px 0px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  /* box-shadow: 0px 0px 201px 0px rgba(199, 199, 199, 1); */
+  position: relative;
+  border-radius: 0px;
+  padding: 50px;
+}
+
 /* ======================================================== */
 
 /* ================== Button Start ================== */
 
-.button {
-  text-align: center;
-  cursor: pointer;
-  font-size: 15px;
-  margin-top: 15px;
+button {
+  margin: 20px;
 }
 
-.button {
-  color: #eee;
-  border: none;
-  padding: 20px;
-  width: 200px;
-  font-weight: 300;
-  transition: all 0.5s;
-}
-
-.button span {
-  cursor: pointer;
-  display: inline-block;
+.custom-btn {
+  width: 130px;
+  height: 40px;
   color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
   position: relative;
-  transition: 0.5s;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
 }
 
-.button span:after {
-  content: "»";
+.btn {
+  border: none;
+  color: #000;
+}
+.btn:after {
   position: absolute;
-  opacity: 0;
+  content: "";
+  width: 0;
+  height: 100%;
   top: 0;
-  right: -20px;
-  transition: 0.5s;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
 }
-
-.button:hover span {
-  padding-right: 25px;
+.btn:hover {
+  color: #000;
 }
-
-.button:hover span:after {
-  opacity: 1;
+.btn:hover:after {
+  left: auto;
   right: 0;
+  width: 100%;
+}
+.btn:active {
+  top: 2px;
+}
+
+/* ======================================================== */
+
+/* ================== Scrool Start ================== */
+
+#preogressbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 50%;
+  background-color: #00dbde;
+  animation: animate 5s linear infinite;
+}
+
+#preogressbar::before,
+#preogressbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(10px);
+  background-color: #000000;
+}
+
+#scrollpath {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background-color: rgba(255, 28, 28, 0.2);
+}
+::-webkit-scrollbar {
+  width: 0;
 }
 
 /* ======================================================== */
@@ -304,34 +393,15 @@ section {
 
 /* ======================================================== */
 
-/* ================== Header Start ================== */
+/* ================== Banner Start ================== */
 
 #home .row h1 {
   font-size: 50px;
   font-weight: 800;
 }
 
-#home .row p {
-  font-size: 25px;
-  font-weight: 600;
-}
-
-.banner_container {
-  min-height: 80vh;
-  background: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-  border-radius: 20px;
-  padding: 50px;
-}
-
 .content {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
   padding: 40px;
-  padding-left: 110px;
   align-self: center;
 }
 
@@ -372,16 +442,9 @@ section {
 
 /* ================== About Start ================== */
 
-button {
-  background-color: #00dbde;
-  background-image: linear-gradient(200deg, #00dbde 0%, #fc00ff 100%);
-}
-
 /* ======================================================== */
 
 /* ================== Why Cousie Us Start ================== */
-
-
 
 /* ======================================================== */
 
@@ -708,4 +771,27 @@ button {
 .footer-menu li a {
   font-size: 14px;
   color: #ffffff;
+}
+
+#text {
+  position: absolute;
+  color: #999;
+  font-weight: 500;
+  padding: 5px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72em;
+}
+
+input.valid {
+  display: inline-block;
+}
+
+input.unvalid {
+  display: none;
+}
+
+.contact #text {
+  top: 40px;
+  left: 05px;
 }

@@ -1,4 +1,4 @@
-//   ------------------ Navbar ----------------------------------
+//   ================== Navbar ==================
 (function () {
     "use strict";
 
@@ -40,11 +40,60 @@
     })
 
 
-})()
-//   ------------------ Loader ----------------------------------
-
-$(window).load(function () {
-    $(".spinner").delay(1000).fadeOut("fast");
-});
+})();
+//   ================== Loader ==================
 
 
+// ================== Validation Email ==================
+
+function validate() {
+    let valid = document.getElementById('valid');
+    let email = document.getElementById('email').value;
+    let text = document.getElementById('text');
+
+    var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if (email.match(pattern)) {
+        valid.classList.add('valid');
+        valid.classList.remove('unvalid');
+        text.innerHTML = "Your email Is Valid"
+        text.style.color = "#00ff08"
+    }
+    else {
+        valid.classList.remove('valid')
+        valid.classList.add('unvalid');
+        text.innerHTML = "Please Enter Vaild email"
+        text.style.color = "#dc3545"
+    }
+    if (email == "") {
+        valid.classList.remove('valid');
+        valid.classList.remove('unvalid');
+        text.innerHTML = "";
+    }
+};
+
+function subvalidate() {
+    let valid = document.getElementById('valid');
+    let email = document.getElementById('email').value;
+    let text = document.getElementById('text');
+
+    var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if (email.match(pattern)) {
+        valid.classList.add('valid');
+        valid.classList.remove('unvalid');
+        text.innerHTML = "Your email Is Valid"
+        text.style.color = "#00ff08"
+    }
+    else {
+        valid.classList.remove('valid')
+        valid.classList.add('unvalid');
+        text.innerHTML = "Please Enter Vaild email"
+        text.style.color = "#dc3545"
+    }
+    if (email == "") {
+        valid.classList.remove('valid');
+        valid.classList.remove('unvalid');
+        text.innerHTML = "";
+    }
+};
